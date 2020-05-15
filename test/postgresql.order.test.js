@@ -94,7 +94,8 @@ describe('Order settings', function() {
     const res = db.connector.buildSelect('PostWithDefaultIdSort', {});
     const sql = res.sql;
 
-    sql.should.be.equal('SELECT "id","title","content" FROM "public"."postwithdefaultidsort" ORDER BY "id"');
+    sql.should.be.equal('SELECT "postwithdefaultidsort"."id","postwithdefaultidsort"."title",' +
+     '"postwithdefaultidsort"."content" FROM "public"."postwithdefaultidsort"  ORDER BY "postwithdefaultidsort"."id"');
     done();
   });
 
@@ -102,7 +103,8 @@ describe('Order settings', function() {
     const res = db.connector.buildSelect('PostWithDisabledDefaultIdSort', {});
     const sql = res.sql;
 
-    sql.should.be.equal('SELECT "id","title","content" FROM "public"."postwithdisableddefaultidsort"');
+    sql.should.be.equal('SELECT "postwithdisableddefaultidsort"."id","postwithdisableddefaultidsort"."title",' +
+      '"postwithdisableddefaultidsort"."content" FROM "public"."postwithdisableddefaultidsort"');
     done();
   });
 
@@ -110,7 +112,9 @@ describe('Order settings', function() {
     const res = db.connector.buildSelect('PostWithNumericDefaultIdSort', {});
     const sql = res.sql;
 
-    sql.should.be.equal('SELECT "id","title","content" FROM "public"."postwithnumericdefaultidsort" ORDER BY "id"');
+    sql.should.be.equal('SELECT "postwithnumericdefaultidsort"."id","postwithnumericdefaultidsort"."title",' +
+      '"postwithnumericdefaultidsort"."content" FROM "public"."postwithnumericdefaultidsort"' +
+      '  ORDER BY "postwithnumericdefaultidsort"."id"');
     done();
   });
 
@@ -118,7 +122,9 @@ describe('Order settings', function() {
     const res = db.connector.buildSelect('PostWithNumericStringDefaultIdSort', {});
     const sql = res.sql;
 
-    sql.should.be.equal('SELECT "id","title","content" FROM "public"."postwithnumericstringdefaultidsort"');
+    sql.should.be.equal('SELECT "postwithnumericstringdefaultidsort"."id",' +
+      '"postwithnumericstringdefaultidsort"."title","postwithnumericstringdefaultidsort"."content"' +
+      ' FROM "public"."postwithnumericstringdefaultidsort"');
     done();
   });
 
