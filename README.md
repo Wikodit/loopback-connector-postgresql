@@ -1,4 +1,4 @@
-## This fork supports INNER JOIN ! 
+## This fork supports INNER JOIN only across one postgres datasource
 
 But it needs a monkey patch :
 
