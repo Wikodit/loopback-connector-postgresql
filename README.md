@@ -1,6 +1,6 @@
 ## This fork supports INNER JOIN only across one postgres datasource
 
-But it needs a monkey patch :
+And it needs a monkey patch :
 
 ```
 /* eslint-disable @typescript-eslint/naming-convention */
