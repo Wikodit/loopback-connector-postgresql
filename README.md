@@ -1,4 +1,4 @@
-## This fork support support INNER JOIN ! 
+## This fork supports INNER JOIN ! 
 
 But it needs a monkey patch :
 
